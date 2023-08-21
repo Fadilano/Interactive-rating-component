@@ -1,0 +1,205 @@
+:root{
+    --ff-default :'Overpass', sans-serif;
+    --font-w-regular:400;
+    --font-w-bold:700;
+    --font-size-400:15px;
+    --font-size-600:1.8rem;
+
+    --color-primary:hsl(25, 97%, 53%);
+    --color-neutral-100:hsl(0, 0%, 100%);
+    --color-neutral-300: hsl(217, 12%, 63%);
+    --color-neutral-400: hsl(216, 12%, 54%,0.1);
+    /* --container-bg:linear-gradient */
+
+    --color-neutral-600: hsl(219, 19%, 15%);
+    --color-neutral-700: hsl(216, 12%, 8%);
+}
+
+/* reset */
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    8. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+/* reset */
+
+body{
+    margin: 0  1.5rem;
+    font-family: var(--ff-default);
+    font-weight: var(--font-w-regular);
+    font-size: var(--font-size-400);
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+    height: 100vh;
+    color: var(--color-neutral-300);
+    background-color: var(--color-neutral-700);
+}
+
+.container-1,.container-2{
+    background-color: var(--color-neutral-600);
+    min-width: 350px;
+    max-width: 400px;
+    /* height: 450px; */
+    border-radius: 1.5rem;
+    min-height: 375px;
+}
+/* container 1 start */
+.container-1{
+    padding: 1.5rem;
+    display: grid;
+    place-items: start;
+    gap: 1.5rem;
+
+    /* display: none; */
+}
+
+.star{
+    width: 2.6rem;
+    aspect-ratio:1/1;
+    background-color: var(--color-neutral-400);
+    display: grid;
+    place-items: center;
+    border-radius: 10rem;
+}
+.title{
+    color: var(--color-neutral-100);
+    font-size: var(--font-size-600);
+    font-weight: var(--font-w-regular);
+    padding: 0;
+}
+.text{
+    margin-top:-1rem ;
+}
+
+/* radio */
+.rating-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flex-group {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .flex-group input[type="radio"] {
+    display: none;
+  }
+  
+  .flex-group label {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    background-color: var(--color-neutral-400);
+    color: var(--color-neutral-300);
+    border-radius: 10rem;
+    /* margin: 0 5px; */
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  label:hover{
+    background-color: var(--color-primary);
+    color: var(--color-neutral-100);
+  }
+  .flex-group input[type="radio"]:checked + label {
+    background-color: var(--color-neutral-300);
+    color: var(--color-neutral-100);
+  }
+
+  #submitBtn{
+    width: 100%;
+    background-color: var(--color-primary);
+    color: var(--color-neutral-100);
+    border: 0;
+    border-radius: 4rem;
+    text-transform: uppercase;
+    font-weight: var(--font-w-regular);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+  }
+  #submitBtn:hover{
+    background-color: var(--color-neutral-100);
+    color: var(--color-primary);
+  }
+/* radio-end */
+/* container 1 end */
+.container-2{
+    display: none;
+    padding: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.selected{
+    color: var(--color-primary);
+    background-color: var(--color-neutral-400);
+    padding:5px;
+    border-radius:50rem;
+}
+.thankyou{
+    color: var(--color-neutral-100);
+    font-weight: var(--font-w-bold);
+}
+
+.text-2{
+    margin-top: -1rem;
+    text-align: center;
+}

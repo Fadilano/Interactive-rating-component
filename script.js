@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const selectedRating = ratingSelect.value;
       result.textContent = `You selected ${selectedRating} out of 5`;
     } else {
-      result.textContent = "none";
+      result.textContent = "You selected X out of 5"";
     }
     const ratingContainer = document.querySelector(".container-1");
     const thankYouContainer = document.querySelector(".container-2");
